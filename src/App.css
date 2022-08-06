@@ -9,3 +9,9 @@
   width: 100vw;
   overflow: hidden;
 }
+
+ul li a {
+    text-decoration: none;
+    color: inherit !important;
+    
+}

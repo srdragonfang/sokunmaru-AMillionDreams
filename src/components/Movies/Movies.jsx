@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import MovieItem from '../MovieItem/MovieItem';
 import './movies.css';
 
-import Button from '@atlaskit/button';
+
 import { RiTv2Line } from 'react-icons/ri';
 
 import axios from '../../axios';
@@ -48,16 +48,6 @@ const Movies = ({id, title, fetchUrl }) => {
 							oldprice={21.99}
 						/>
 					))}
-				</div>
-				<div className='Movie__list-btn'>
-					<Button>1</Button>
-					<Button>2</Button>
-					<Button>3</Button>
-					<Button>4</Button>
-					<Button>5</Button>
-					<Button>6</Button>
-					<Button>7</Button>
-					<Button>...</Button>
 				</div>
 			</div>
 		</div>
