@@ -1,6 +1,6 @@
 import './App.css';
 import HomePage from './pages/HomePage';
-import SignIn from './pages/SignIn';
+import SignIn from './components/SignIn/SignIn';
 // import Navbar from './components/Navbar/Navbar'
 // import Banner from './components/Banner/Banner'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'

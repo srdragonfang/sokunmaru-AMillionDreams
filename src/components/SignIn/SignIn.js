@@ -1,16 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import './signin.css'
 import { Link } from 'react-router-dom'
 import { MdOutlineKeyboardBackspace } from 'react-icons/md'
+
+import axios from '../../axios';
+import requests from '../../request';
+
 const SignIn = () => {
+
+    const baseURL = 'https://image.tmdb.org/t/p/original/';
+	const [movie, setMovie] = useState([]);
+
+    useEffect(() => {
+		async function fetchData() {
+			const response = await axios.get(requests.fetchNetflixOriginals);
+
+			setMovie(
+				response.data.results[
+					Math.floor(Math.random() * response.data.results.length - 1)
+				]
+			);
+			return response;
+		}
+		fetchData();
+	}, []);
+
     return (
         <>
             <div class="signin__bg"
-                style={{
-                    backgroundSize: "cover",
-                    backgroundImage: `url("https://images8.alphacoders.com/121/1211632.jpg")`,
-                    backgroundPosition: "center center"
-                }}
+			style={{
+				backgroundSize: 'cover',
+				backgroundImage: `url(
+                    ${baseURL}${movie.backdrop_path}
+                )`,
+				backgroundPosition: 'center center',
+			}}
             >
                 <div class="signin__container">
                     <form>

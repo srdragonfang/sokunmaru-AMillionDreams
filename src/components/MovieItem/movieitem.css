@@ -64,12 +64,14 @@
   flex-direction: row;
 }
 .MovieItem__list {
-  width: 100%;
-  min-height: 300px;
-  align-items: center;
-  justify-content: space-around;
-  text-align: left;
-  padding: 1rem;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .MovieItem__title {
@@ -92,9 +94,10 @@
 }
 .MovieItem__price {
   color: goldenrod;
-  font-size: 22px;
+  font-size: 24px;
 }
 .MovieItem__oldprice {
+    font-size: 22px;
   text-decoration: line-through;
 }
 .MovieItem__img2 {
@@ -106,9 +109,9 @@
 }
 .MovieItem__description {
   margin-bottom: 0.5rem;
-  opacity: 70%;
-  font-size: 16px;
+  margin: 1rem 0;
 }
+
 .price__btn {
   outline: none;
   border: none;
@@ -121,22 +124,7 @@
   opacity: 100%;
   cursor: pointer;
 }
-.Movie__list-btn {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-}
-.Movie__list-btn Button {
-  margin-right: 0.5rem;
-  background: rgba(0, 0, 0, 0.205);
-  width: 40px;
-  font-size: 16px;
-}
-.Movie__list-btn Button:hover {
-  background: rgba(0, 0, 0, 0.753);
-}
+
 
 @media screen and (max-width: 1050px) {
   .data__bg {

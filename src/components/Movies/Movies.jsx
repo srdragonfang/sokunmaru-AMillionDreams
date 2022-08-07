@@ -2,13 +2,11 @@ import React, { useEffect, useState } from 'react';
 import MovieItem from '../MovieItem/MovieItem';
 import './movies.css';
 
-
 import { RiTv2Line } from 'react-icons/ri';
 
 import axios from '../../axios';
 
-
-const Movies = ({id, title, fetchUrl }) => {
+const Movies = ({ id, title, fetchUrl }) => {
 	const baseURL = 'https://image.tmdb.org/t/p/original/';
 	const [movies, setMovies] = useState([]);
 
@@ -36,6 +34,8 @@ const Movies = ({id, title, fetchUrl }) => {
 				<div className='Movie__list'>
 					{movies.map((movie) => (
 						<MovieItem
+							key={movie.id}
+							movie={movie}
 							image={`${baseURL}${movie.poster_path}`}
 							title={
 								movie?.title ||

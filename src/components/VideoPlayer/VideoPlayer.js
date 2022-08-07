@@ -6,7 +6,7 @@ import { IoIosClose } from 'react-icons/io'
 
 const VideoPlayer = () => {
     const opts = {
-        width: "780",
+        width: "768",
         height: "460",
         playerVars: {
             autoplay: 1,
@@ -24,7 +24,7 @@ const VideoPlayer = () => {
                 <div class="data__bg-trailer">
                     <div className='trailer__popUp-bar'><Link className="link__button" to="/"><IoIosClose size={30} /></Link></div>
                     <Youtube
-                        videoId="4Ps6nV4wiCE"
+                        videoId="TO-_3tck2tg"
                         opts={opts}
                     />
                 </div>

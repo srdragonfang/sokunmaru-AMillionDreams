@@ -42,7 +42,7 @@ const Banner = () => {
 				<div className='banner__description'>
 					<p>{truncate(movie?.overview, 150)}</p>
 				</div>
-				<ButtonList />
+				<ButtonList title={movie.name} />
 			</div>
 		</div>
 	);

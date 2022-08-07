@@ -4,8 +4,9 @@ import ButtonList from '../ButtonList/ButtonList'
 import avatar from '../../assets/avatar/images.png'
 import 'react-icons/ri'
 import { RiCloseLine } from 'react-icons/ri'
-const MovieItem = ({ image, title, description, price, oldprice, rating }) => {
+const MovieItem = ({image, title, description}) => {
     const [toggleTrailerPoster, setToggleTrailerPoster] = useState(false);
+
     return (
         <>
             <div className="MovieIem" onClick={() => setToggleTrailerPoster(true)}>
@@ -18,20 +19,10 @@ const MovieItem = ({ image, title, description, price, oldprice, rating }) => {
                             <RiCloseLine size={27} onClick={() => setToggleTrailerPoster(false)} />
                         </div>
                         <div className="MovieItem__container">
-
                             <div className="MovieItem__info">
                                 <img className="MovieItem__img2" src={image} alt="MovieItem__cover" />
                                 <div className="MovieItem__list">
                                     <h1 className="MovieItem__title">{title}</h1>
-
-                                    <div className='MovieItem__rating'>{rating}</div>
-                                    <div className="MovieItem__price-container">
-                                        <div >
-                                            <span className='MovieItem__oldprice'>$<strong>{oldprice}</strong></span>
-                                            <strong className='MovieItem__price'><span>$</span>{price}</strong>
-                                        </div>
-                                        <button className='price__btn'>ADD TO BASKET</button>
-                                    </div>
                                     <div className="MovieItem__description">{description}</div>
                                     <ButtonList />
                                 </div>
