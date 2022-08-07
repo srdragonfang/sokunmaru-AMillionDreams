@@ -3,23 +3,22 @@ import './buttonlist.css';
 import { IoIosAdd } from 'react-icons/io';
 import { BsFillPlayFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-const ButtonList = ({ title }) => {
+const ButtonList = () => {
 
 	return (
 		<>
-			<div className='Banner__buttons'>
+			<div className='banner__buttons'>
 				<button
-					className='btn__first'
+					className='banner__button--primary'
 				>
 					<Link className='link__button' to='trailer'>
-						Trailer
+						TRAILER
 					</Link>
 				</button>
-				<button className='Banner__button btn__sup'>
-					{' '}
+				<button className='banner__button--secondary'>
 					<BsFillPlayFill size={30} />
 				</button>
-				<button className='Banner__button btn__sup'>
+				<button className='banner__button--secondary'>
 					<IoIosAdd size={30} />
 				</button>
 			</div>

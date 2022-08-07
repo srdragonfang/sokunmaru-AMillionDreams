@@ -10,24 +10,24 @@ const MovieItem = ({image, title, description}) => {
     return (
         <>
             <div className="MovieIem" onClick={() => setToggleTrailerPoster(true)}>
-                <img className="MovieItem__img" src={image} alt="MovieItem__img" />
+                <img className="movieItem__img" src={image} alt="movieItem__img" />
             </div>
             {toggleTrailerPoster && (
                 <div className="data__popUp">
                     <div className="data__bg">
-                        <div className="MovieItem__bar">
+                        <div className="movieItem__bar">
                             <RiCloseLine size={27} onClick={() => setToggleTrailerPoster(false)} />
                         </div>
-                        <div className="MovieItem__container">
-                            <div className="MovieItem__info">
-                                <img className="MovieItem__img2" src={image} alt="MovieItem__cover" />
-                                <div className="MovieItem__list">
-                                    <h1 className="MovieItem__title">{title}</h1>
-                                    <div className="MovieItem__description">{description}</div>
+                        <div className="movieItem__container">
+                            <div className="movieItem__info">
+                                <img className="movieItem__img2" src={image} alt="movieItem__cover" />
+                                <div className="movieItem__list">
+                                    <h1 className="movieItem__title">{title}</h1>
+                                    <div className="movieItem__description">{description}</div>
                                     <ButtonList />
                                 </div>
                             </div>
-                            <div className='MovieItem__cast'>
+                            <div className='movieItem__cast'>
                                 <h3>CASTING</h3>
                                 <div className="casting__data">
                                     <div className="casting__item">

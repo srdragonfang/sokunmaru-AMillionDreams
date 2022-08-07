@@ -25,13 +25,13 @@ const Movies = ({ id, title, fetchUrl }) => {
 	}
 
 	return (
-		<div className='Movie__bg' id={id}>
-			<div className='Movie__data'>
+		<div className='movie__bg' id={id}>
+			<div className='movie__data'>
 				<h4>
 					<RiTv2Line size={20} />
 					<span>{title}</span>
 				</h4>
-				<div className='Movie__list'>
+				<div className='movie__list'>
 					{movies.map((movie) => (
 						<MovieItem
 							key={movie.id}

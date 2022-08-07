@@ -10,8 +10,4 @@
   color: goldenrod;
   font-size: 20px;
 }
-@media screen and (max-width: 768px) {
-  .credits {
-    margin-bottom: 4rem;
-  }
-}
+
