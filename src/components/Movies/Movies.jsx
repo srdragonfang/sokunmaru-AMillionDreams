@@ -35,6 +35,7 @@ const Movies = ({ id, title, fetchUrl }) => {
 					{movies.map((movie) => (
 						<MovieItem
 							key={movie.id}
+							id={movie.id}
 							movie={movie}
 							image={`${baseURL}${movie.poster_path}`}
 							title={

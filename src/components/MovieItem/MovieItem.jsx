@@ -4,7 +4,7 @@ import ButtonList from '../ButtonList/ButtonList'
 import avatar from '../../assets/avatar/images.png'
 import 'react-icons/ri'
 import { RiCloseLine } from 'react-icons/ri'
-const MovieItem = ({image, title, description}) => {
+const MovieItem = ({id, image, title, description}) => {
     const [toggleTrailerPoster, setToggleTrailerPoster] = useState(false);
 
     return (
@@ -24,7 +24,12 @@ const MovieItem = ({image, title, description}) => {
                                 <div className="movieItem__list">
                                     <h1 className="movieItem__title">{title}</h1>
                                     <div className="movieItem__description">{description}</div>
-                                    <ButtonList />
+                                    <ButtonList id={id} 
+                                    title={title}
+                                    description={description}
+                                    image={image}
+                                    price={10}
+                                    />
                                 </div>
                             </div>
                             <div className='movieItem__cast'>
